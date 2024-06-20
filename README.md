@@ -1,0 +1,1 @@
+# Slidely AI task - 02
