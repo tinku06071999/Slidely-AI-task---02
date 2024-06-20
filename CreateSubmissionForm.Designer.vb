@@ -27,8 +27,8 @@ Partial Class CreateSubmissionForm
         txtEmail = New TextBox()
         txtPhone = New TextBox()
         txtGithubLink = New TextBox()
-        btnStartStop = New Button()
-        btnSubmit = New Button()
+        btnStartStop = New RoundedButton()
+        btnSubmit = New RoundedButton()
         Label1 = New Label()
         Label2 = New Label()
         Label3 = New Label()
@@ -139,7 +139,7 @@ Partial Class CreateSubmissionForm
         ' 
         lblTitle.AutoSize = True
         lblTitle.Location = New Point(66, 33)
-        lblTitle.Name = "Label5"
+        lblTitle.Name = "lblTitle"
         lblTitle.Size = New Size(38, 20)
         lblTitle.TabIndex = 11
         lblTitle.Text = "Title"
@@ -173,8 +173,8 @@ Partial Class CreateSubmissionForm
     Friend WithEvents txtEmail As TextBox
     Friend WithEvents txtPhone As TextBox
     Friend WithEvents txtGithubLink As TextBox
-    Friend WithEvents btnStartStop As Button
-    Friend WithEvents btnSubmit As Button
+    Friend WithEvents btnStartStop As RoundedButton
+    Friend WithEvents btnSubmit As RoundedButton
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label

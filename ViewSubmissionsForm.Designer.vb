@@ -27,8 +27,8 @@ Partial Class ViewSubmissionsForm
         TextBox3 = New TextBox()
         TextBox4 = New TextBox()
         TextBox5 = New TextBox()
-        btnPrevious = New Button()
-        btnNext = New Button()
+        btnPrevious = New RoundedButton()
+        btnNext = New RoundedButton()
         lblName = New Label()
         lblEmail = New Label()
         lblPhone = New Label()
@@ -95,9 +95,9 @@ Partial Class ViewSubmissionsForm
         ' btnNext
         ' 
         btnNext.BackColor = Color.SkyBlue
-        btnNext.Location = New Point(277, 343)
+        btnNext.Location = New Point(264, 343)
         btnNext.Name = "btnNext"
-        btnNext.Size = New Size(211, 29)
+        btnNext.Size = New Size(232, 29)
         btnNext.TabIndex = 6
         btnNext.Text = "NEXT (CTRL + N)" & vbCrLf
         btnNext.UseVisualStyleBackColor = False
@@ -187,8 +187,8 @@ Partial Class ViewSubmissionsForm
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents btnPrevious As Button
-    Friend WithEvents btnNext As Button
+    Friend WithEvents btnPrevious As RoundedButton
+    Friend WithEvents btnNext As RoundedButton
     Friend WithEvents lblName As Label
     Friend WithEvents lblEmail As Label
     Friend WithEvents lblPhone As Label

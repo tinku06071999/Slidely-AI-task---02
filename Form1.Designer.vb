@@ -22,17 +22,18 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        btnViewSubmissions = New Button()
-        btnCreateSubmission = New Button()
+        btnViewSubmissions = New RoundedButton()
+        btnCreateSubmission = New RoundedButton()
+        lblTitle = New Label()
         SuspendLayout()
         ' 
         ' btnViewSubmissions
         ' 
         btnViewSubmissions.BackColor = Color.Khaki
-        btnViewSubmissions.Location = New Point(79, 73)
-        btnViewSubmissions.Margin = New Padding(3, 4, 3, 4)
+        btnViewSubmissions.Location = New Point(79, 107)
+        btnViewSubmissions.Margin = New Padding(0)
         btnViewSubmissions.Name = "btnViewSubmissions"
-        btnViewSubmissions.Size = New Size(415, 62)
+        btnViewSubmissions.Size = New Size(415, 37)
         btnViewSubmissions.TabIndex = 0
         btnViewSubmissions.Text = "View Submissions (CTRL + V)" & vbCrLf
         btnViewSubmissions.UseVisualStyleBackColor = False
@@ -40,19 +41,29 @@ Partial Class Form1
         ' btnCreateSubmission
         ' 
         btnCreateSubmission.BackColor = Color.LightSkyBlue
-        btnCreateSubmission.Location = New Point(79, 155)
+        btnCreateSubmission.Location = New Point(79, 188)
         btnCreateSubmission.Margin = New Padding(0)
         btnCreateSubmission.Name = "btnCreateSubmission"
-        btnCreateSubmission.Size = New Size(415, 62)
+        btnCreateSubmission.Size = New Size(415, 37)
         btnCreateSubmission.TabIndex = 1
         btnCreateSubmission.Text = "Create New Submission (CTRL + N)" & vbCrLf
         btnCreateSubmission.UseVisualStyleBackColor = False
+        ' 
+        ' lblTitle
+        ' 
+        lblTitle.AutoSize = True
+        lblTitle.Location = New Point(144, 52)
+        lblTitle.Name = "lblTitle"
+        lblTitle.Size = New Size(38, 20)
+        lblTitle.TabIndex = 2
+        lblTitle.Text = "Title"
         ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(8.0F, 20.0F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(600, 300)
+        Controls.Add(lblTitle)
         Controls.Add(btnCreateSubmission)
         Controls.Add(btnViewSubmissions)
         KeyPreview = True
@@ -60,10 +71,12 @@ Partial Class Form1
         Name = "Form1"
         Text = "Submission App"
         ResumeLayout(False)
+        PerformLayout()
 
     End Sub
 
-    Friend WithEvents btnViewSubmissions As Button
-    Friend WithEvents btnCreateSubmission As Button
+    Friend WithEvents btnViewSubmissions As RoundedButton
+    Friend WithEvents btnCreateSubmission As RoundedButton
+    Friend WithEvents lblTitle As Label
 
 End Class

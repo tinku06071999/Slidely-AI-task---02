@@ -18,6 +18,7 @@ Public Class ViewSubmissionsForm
 
             If response.IsSuccessStatusCode Then
                 Dim content = Await response.Content.ReadAsStringAsync()
+
                 Dim submissionData = JsonConvert.DeserializeObject(Of Submission)(content)
 
                 TextBox1.Text = submissionData.name
