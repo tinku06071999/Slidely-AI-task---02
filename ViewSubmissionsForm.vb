@@ -1,4 +1,5 @@
 ﻿Imports System.Net.Http
+Imports System.Text
 Imports Newtonsoft.Json
 
 Public Class ViewSubmissionsForm
@@ -50,12 +51,32 @@ Public Class ViewSubmissionsForm
     End Sub
 
     Private Sub ViewSubmissionsForm_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
+
         If e.Control AndAlso e.KeyCode = Keys.P Then
             btnPrevious.PerformClick()
         ElseIf e.Control AndAlso e.KeyCode = Keys.N Then
             btnNext.PerformClick()
         End If
     End Sub
+    Private Async Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+        Try
+            Dim response = Await httpClient.DeleteAsync($"{baseURL}/delete?index={currentIndex}")
+
+            If response.IsSuccessStatusCode Then
+                MessageBox.Show("Submission deleted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                If currentIndex > 0 Then
+                    currentIndex -= 1
+                End If
+                Await LoadSubmission(currentIndex)
+            Else
+                MessageBox.Show("Failed to delete submission", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+        Catch ex As Exception
+            MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+
 
 
 End Class

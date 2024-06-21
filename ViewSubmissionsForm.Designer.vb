@@ -36,6 +36,7 @@ Partial Class ViewSubmissionsForm
         lblGithubLink = New Label()
         lblStopwatchTime = New Label()
         lblTitle = New Label()
+        btnDelete = New RoundedButton()
         SuspendLayout()
         ' 
         ' TextBox1
@@ -86,7 +87,7 @@ Partial Class ViewSubmissionsForm
         ' btnPrevious
         ' 
         btnPrevious.BackColor = Color.Khaki
-        btnPrevious.Location = New Point(22, 343)
+        btnPrevious.Location = New Point(22, 378)
         btnPrevious.Name = "btnPrevious"
         btnPrevious.Size = New Size(219, 29)
         btnPrevious.TabIndex = 5
@@ -96,7 +97,7 @@ Partial Class ViewSubmissionsForm
         ' btnNext
         ' 
         btnNext.BackColor = Color.SkyBlue
-        btnNext.Location = New Point(264, 343)
+        btnNext.Location = New Point(256, 378)
         btnNext.Name = "btnNext"
         btnNext.Size = New Size(232, 29)
         btnNext.TabIndex = 6
@@ -157,6 +158,16 @@ Partial Class ViewSubmissionsForm
         lblTitle.TabIndex = 13
         lblTitle.Text = "Title"
         ' 
+        ' btnDelete
+        ' 
+        btnDelete.BackColor = Color.LightCoral
+        btnDelete.Location = New Point(169, 319)
+        btnDelete.Name = "btnDelete"
+        btnDelete.Size = New Size(267, 30)
+        btnDelete.TabIndex = 2
+        btnDelete.Text = "Delete"
+        btnDelete.UseVisualStyleBackColor = False
+        ' 
         ' ViewSubmissionsForm
         ' 
         AutoScaleDimensions = New SizeF(8.0F, 20.0F)
@@ -175,11 +186,13 @@ Partial Class ViewSubmissionsForm
         Controls.Add(TextBox3)
         Controls.Add(TextBox2)
         Controls.Add(TextBox1)
+        Controls.Add(btnDelete)
         KeyPreview = True
         Name = "ViewSubmissionsForm"
         Text = "View Submissions"
         ResumeLayout(False)
         PerformLayout()
+
 
     End Sub
 
@@ -196,4 +209,5 @@ Partial Class ViewSubmissionsForm
     Friend WithEvents lblGithubLink As Label
     Friend WithEvents lblStopwatchTime As Label
     Friend WithEvents lblTitle As Label
+    Friend WithEvents btnDelete As RoundedButton
 End Class
