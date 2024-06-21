@@ -22,7 +22,7 @@ Public Class Form1
 
                 lblTitle.Text = $"{submissionData.name}, Slidely Task 2 - Create Submissions"
                 If submissionData IsNot Nothing AndAlso Not String.IsNullOrEmpty(submissionData.name) Then
-                    lblTitle.Text = $"{submissionData.name}, Slidely Task 2 - Create Submissions"
+                    lblTitle.Text = $"{submissionData.name}, Slidely Task 2 - Slidely Form App"
                 Else
                     MessageBox.Show("Submission data is empty or name is missing", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End If
